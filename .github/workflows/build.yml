@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -q PingGuard.zip
+      - run: unzip -q "PingGuard (1).zip"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
