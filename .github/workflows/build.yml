@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -q "PingGuard (1).zip"
+      - run: unzip -q RouterPingWatch.zip
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -13,8 +13,8 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 8.7
-      - run: cd PingGuard && gradle assembleDebug --no-daemon
+      - run: cd RouterPingWatch && gradle assembleDebug --no-daemon
       - uses: actions/upload-artifact@v4
         with:
-          name: PingGuard-apk
-          path: PingGuard/app/build/outputs/apk/debug/app-debug.apk
+          name: RouterPingWatch-apk
+          path: RouterPingWatch/app/build/outputs/apk/debug/app-debug.apk
