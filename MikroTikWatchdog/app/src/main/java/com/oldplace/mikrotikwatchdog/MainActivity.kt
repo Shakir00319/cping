@@ -67,7 +67,7 @@ class MainActivity : Activity() {
     }
 
     private fun edit(hintText: String, type: Int): EditText = EditText(this).apply {
-        hint = hintText; inputType = type; textSize = 14f; singleLine = true
+        hint = hintText; inputType = type; textSize = 14f; isSingleLine = true
         setPadding(dp(12), dp(9), dp(12), dp(9)); setBackgroundColor(0xFFF0F4F2.toInt())
     }
 
